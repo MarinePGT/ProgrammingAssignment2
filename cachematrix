@@ -4,7 +4,7 @@
 # (21st October 2015)
 # Author: M Pouget
 
-## Created following functions:
+## functions:
   # 1.makeCacheMatrix: fct creates "matrix" object that cache its inverse
   # 2.cacheSolve: fct computes inverse of the "matrix" returned by makeCacheMatrix 
     # If inverse already calculated (and matrix not changed), 
@@ -14,7 +14,6 @@
 setwd("C://Users/mpouget/Desktop/Coursera/assigment2")
 
 ### 1
-
 makeCacheMatrix <- function(x = matrix()) {
   
   ## return: a list containing functions to
@@ -40,7 +39,6 @@ makeCacheMatrix <- function(x = matrix()) {
 dump("makeCacheMatrix", file="makeCacheMatrix.R")
 
 ### 2
-
 cacheSolve <- function (x=matrix(), ...) {
   ## return: inverse of the original matrix input to makeCacheMatrix()
   
@@ -61,11 +59,6 @@ cacheSolve <- function (x=matrix(), ...) {
 dump("cacheSolve",file="cacheSolve.R")
 
 
-###Test functions
-
 source("cachematrix.R")
 source("cacheSolve.R")
 
-my_matrix <- makeCacheMatrix(matrix(1:4, 2, 2))
-
-cacheSolve(my_matrix)
